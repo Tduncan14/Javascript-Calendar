@@ -21,5 +21,14 @@ let firstDay =(new Date(year,month)).getDay();
          break;
      }
 
- }
+     else{
+         cell =document.createElement("td");
+         cellText= document.createTextNode(date);
+         cell.appendChild(cellText);
+         row.appendChild(cell);
+         date++;
+     }
+
+   }
+   tbl.appendChild(row); // appending each row into calendar body.
  }
