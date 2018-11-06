@@ -10,7 +10,7 @@
  </head>
  <body>
      <div class="container col-sm-4 col-md-7 col-lg-4 mt=5">
-       <div class="card">
+       <div class="card" style="border:none;">
            <h3 class="card header" id="monthAndYear"></h3>
        <table class="table table-bordered table-responsive-sm" id="calendar">
            <thead>
@@ -24,6 +24,7 @@
                 <th>Saturday</th>
                </tr>
            </thead>
+        
            <tbody id="calendar-body">
 
            </tbody>
@@ -32,7 +33,19 @@
            <button class="btn btn-outline-primary col-sm-6" id="previous" onclick="previous()">Previous</button>
            <button class="btn btn-outline-primary col-sm-6" id="next" onclick="next()">Next</button>
        </div>
-       </div>
+       <br />
+       <form class="form-inline">
+           <label class="lead mr-2 ml-2" for="month">Jump To:</label>
+            <select class="form-control col-sm-4" name="month" id="month" onchange="jump()">
+                <option value=0>Jan</option>
+                <option value=1>Feb</option>
+                <option value=2>March</option>
+                <option value=3>April</option>
+            </select>
+             
+
+       </form>
+      </div>
 
      </div>
  </body>
