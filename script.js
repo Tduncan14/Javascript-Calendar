@@ -40,3 +40,16 @@ function jump(){
     showCalendar(currentMonth,currentYear);
 }
 
+function showCalendar(month, year) {
+
+    let firstDay = (new Date(year, month)).getDay();
+    let daysInMonth = 32 - new Date(year, month, 32).getDate();
+
+    let tbl = document.getElementById("calendar-body");
+
+    // clearing all previous cells
+    tbl.innerHtml = "";
+
+        tbl.appendChild(row); // appending each row into calendar body.
+    }
+
