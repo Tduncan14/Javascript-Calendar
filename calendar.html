@@ -3,14 +3,57 @@
         <title>Calendar</title>
         
         <script language="Javascript">
-        /*    var now = new Date()
+          var now = new Date()
               var month = new Date(fixYear(now.getYear() ), now.getMonth(), 1);
-              var months = ["jan", "Feb", "Mar","Apr","May,"Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+              var months = ["jan", "Feb", "Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
               function fixYear(year){
                   return (year < 1000? year + 1900 :year);
               }
 
+              function getNumberDays(d){
+                   switch(d.getMonth() + 1) {
+                       case 1: case 3: case 5: case 7:
+                       case 8: case 10: case 12:
+                           return(31)
+                           break;
+                      case 4: case 6: case 9: case 11:
+                           return(30)
+                           break;
+                      case 2:
+
+                    return(28 +(d.getYear % 4 == 0 ? 1: 0));
+              }
+            }
+            
+
         </script>
     </head>
+    <body>
+        <table border="1" cellpadding ="2" width = "75%">
+            <tr>
+                <td colspan ="10" align ="center">
+                <font size ="6">
+                    <b>
+                        <script language ="Javascript">
+                            document.write(months[month.getMonth()] + " " + fixYear(month.getYear()) );
+                            </script>
+                    </b>
+                </font>
+                </td>
+            </tr>
+            <tr>
+                <td width ="14%"><b>Sunday</b></td>
+                <td width ="14%"><b>Monday</b></td>
+                <td width ="14%"><b>Tuesday</b></td>
+                <td width ="14%"><b>Wednesday</b></td>
+                <td width ="14%"><b>Thursday</b></td>
+                <td width ="14%"><b>Friday</b></td>
+                <td width ="14%"><b>Saturday</b></td>
+
+
+                
+            </tr>
+        </table>
+    </body>
 </html>
