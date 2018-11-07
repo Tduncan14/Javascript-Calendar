@@ -17,3 +17,13 @@ let selectMonth = document.getElementById("month");
 // creating an array
 
 let months =["Jan","Feb","Mar","Apr","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+let monthAndYear=document.getElementById("monthAndYear");
+// calls the function
+showCalendar(currentMonth,currentYear);
+
+function next(){
+    currentYear =(currentMonth === 11) ? currentYear + 1: currentYear;
+    currentMonth =(currentMonth+1) %12;
+    showCalendar(currentMonth,currentYear);
+}
